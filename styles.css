@@ -1,14 +1,14 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #DCCCFF;
+    background: #FDF3F3; /* Soft light pink */
 }
 
 header {
     text-align: center;
-    background: #F6F2FF;
-    color: #DCCCFF;
+    background: #F4CCCC; /* Delicate romantic pink */
+    color: #A64D79; /* Deep rich mauve */
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: slideDown 1s ease-out;
@@ -26,18 +26,20 @@ header p {
 
 main {
     padding: 20px;
+    color: #5A3D55; /* Muted plum for main text */
 }
 
 .gallery {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    background: #FFF1F3; /* Very light subtle pink */
     animation: fadeIn 1.5s ease-in;
 }
 
 .gallery h2 {
     font-size: 2em;
-    color: #333;
+    color: #5A3D55; /* Muted plum */
 }
 
 .photos {
@@ -52,18 +54,19 @@ main {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(217, 179, 196, 0.5); /* Dusty rose */
 }
 
 .photos img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(217, 179, 196, 0.8); /* Dusty rose */
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #F6F2FF;
-    color: #DCCCFF;
+    background: #F4CCCC; /* Delicate romantic pink */
+    color: #A64D79; /* Deep rich mauve */
     position: fixed;
     width: 100%;
     bottom: 0;
