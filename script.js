@@ -46,3 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.getElementById('monthSelect').addEventListener('change', function() {
+    const selectedMonth = this.value;
+    const galleryGrid = document.getElementById('galleryGrid');
+    galleryGrid.innerHTML = ''; // Clear existing images
+
+    if (selectedMonth) {
+        const images = document.querySelectorAll(`.slider img[data-month="${selectedMonth}"]`);
+        images.forEach(img => {
+            const clone = img.cloneNode(true);
+            clone.onclick = () => {
+                // Optional: add click behavior to view full size
+                window.open(clone.src, '_blank');
+            };
+            galleryGrid.appendChild(clone);
+        });
+    }
+});
