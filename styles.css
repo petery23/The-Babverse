@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 0.9em; /* Reduce base font size */
 }
 
 /* Header Styles */
@@ -15,7 +16,7 @@ header {
     text-align: center;
     background: linear-gradient(to right, #540D6E, #EE4266);
     color: #F3FCF0;
-    padding: 25px 0;
+    padding: 20px 0; /* Reduce padding */
     box-shadow: 0 4px 15px rgba(84, 13, 110, 0.2);
     animation: slideDown 1s ease-out;
     width: 100%;
@@ -25,7 +26,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.8em;
+    font-size: 2.5em; /* Reduce font size */
     color: #FFD23F;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 2px;
@@ -33,8 +34,8 @@ header h1 {
 }
 
 header h2 {
-    margin: 15px 0;
-    font-size: 1.8em;
+    margin: 10px 0; /* Reduce margin */
+    font-size: 1.5em; /* Reduce font size */
     color: #F3FCF0;
     font-weight: 300;
 }
@@ -43,8 +44,8 @@ header h2 {
 .header-decoration {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
+    gap: 20px; /* Reduce gap */
+    margin-top: 10px; /* Reduce margin */
 }
 
 .header-decoration figure {
@@ -55,7 +56,7 @@ header h2 {
 }
 
 .header-decoration img {
-    height: 140px;
+    height: 120px; /* Reduce height */
     width: auto;
     object-fit: contain;
     mix-blend-mode: multiply;
@@ -69,7 +70,7 @@ header h2 {
 
 .header-decoration figcaption {
     color: #FFD23F;
-    font-size: 1.2em;
+    font-size: 1em; /* Reduce font size */
     margin-top: 5px;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -79,9 +80,9 @@ header h2 {
 main {
     flex: 1;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px; /* Reduce max-width */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 20px; /* Reduce padding */
     box-sizing: border-box;
     background: #fff;
     border-radius: 20px;
@@ -91,16 +92,16 @@ main {
 /* Slider Styles */
 .slider-container {
     position: relative;
-    width: 90%;
-    max-width: 1000px;
+    width: 85%; /* Reduce width */
+    max-width: 900px; /* Reduce max-width */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(84, 13, 110, 0.15);
     background: white;
-    padding: 20px 0;
-    height: 70vh;
-    min-height: 400px;
+    padding: 15px 0; /* Reduce padding */
+    height: 60vh; /* Reduce height */
+    min-height: 350px; /* Reduce min-height */
 }
 
 .slider {
@@ -134,16 +135,16 @@ main {
     background: rgba(84, 13, 110, 0.9);
     color: #F3FCF0;
     border: none;
-    padding: 1.2rem;
+    padding: 1rem; /* Reduce padding */
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 45px; /* Reduce width */
+    height: 45px; /* Reduce height */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8em;
+    font-size: 1.5em; /* Reduce font size */
     transition: all 0.3s ease;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -167,7 +168,7 @@ main {
 .back-arrow {
     display: inline-block;
     margin: 10px;
-    font-size: 1.5em;
+    font-size: 1.3em; /* Reduce font size */
     color: #540D6E;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -179,25 +180,25 @@ main {
 
 /* Month Gallery */
 .month-gallery {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
+    width: 85%; /* Reduce width */
+    max-width: 900px; /* Reduce max-width */
+    margin: 20px auto; /* Reduce margin */
     text-align: center;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(84, 13, 110, 0.15);
-    padding: 20px;
+    padding: 15px; /* Reduce padding */
 }
 
 .month-selector {
-    padding: 10px 20px;
-    font-size: 1.1em;
+    padding: 8px 15px; /* Reduce padding */
+    font-size: 1em; /* Reduce font size */
     border-radius: 10px;
     border: 2px solid #540D6E;
     background: white;
     color: #540D6E;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduce margin */
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
@@ -209,18 +210,18 @@ main {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Reduce min-width */
+    gap: 15px; /* Reduce gap */
+    padding: 15px; /* Reduce padding */
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(84, 13, 110, 0.15);
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduce margin */
 }
 
 .gallery-grid img {
     width: 100%;
-    height: 200px;
+    height: 180px; /* Reduce height */
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -234,8 +235,8 @@ main {
 /* Mystery Link */
 .mystery-link {
     text-align: center;
-    margin-top: 30px;
-    font-size: 1.2em;
+    margin-top: 20px; /* Reduce margin */
+    font-size: 1em; /* Reduce font size */
 }
 
 .rainbow-link {
@@ -255,7 +256,7 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0; /* Reduce padding */
     background: linear-gradient(to right, #540D6E, #EE4266);
     color: #FFD23F;
     width: 100%;
@@ -265,7 +266,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1em; /* Reduce font size */
     letter-spacing: 1px;
 }
 
@@ -300,16 +301,16 @@ footer p {
 .movie-list li {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 8px; /* Reduce padding */
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .movie-list li img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+    width: 45px; /* Reduce width */
+    height: 45px; /* Reduce height */
+    margin-right: 15px; /* Reduce margin */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -332,16 +333,16 @@ footer p {
     }
 
     header {
-        padding: 15px 5px;
+        padding: 10px 5px; /* Reduce padding */
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Reduce font size */
         padding: 0 10px;
     }
     
     header h2 {
-        font-size: 1.3em;
+        font-size: 1.2em; /* Reduce font size */
     }
 
     .header-decoration {
@@ -349,7 +350,7 @@ footer p {
     }
 
     .header-decoration img {
-        height: 80px;
+        height: 70px; /* Reduce height */
     }
 
     main {
@@ -358,30 +359,30 @@ footer p {
     }
 
     .slider-container {
-        width: 95%;
-        height: 400px;
-        padding: 10px 0;
+        width: 90%; /* Reduce width */
+        height: 350px; /* Reduce height */
+        padding: 10px 0; /* Reduce padding */
     }
 
     .nav-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2em;
-        padding: 0.8rem;
+        width: 30px; /* Reduce width */
+        height: 30px; /* Reduce height */
+        font-size: 1em; /* Reduce font size */
+        padding: 0.6rem; /* Reduce padding */
     }
 
     .month-gallery {
-        width: 95%;
+        width: 90%; /* Reduce width */
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-        padding: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Reduce min-width */
+        gap: 10px; /* Reduce gap */
+        padding: 10px; /* Reduce padding */
     }
 
     .mystery-link {
-        font-size: 1em;
+        font-size: 0.9em; /* Reduce font size */
         padding: 0 10px;
     }
 }
@@ -389,17 +390,17 @@ footer p {
 /* Tablet Styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .slider-container {
-        height: 500px;
+        height: 450px; /* Reduce height */
     }
 
     main {
-        padding: 30px 15px;
+        padding: 25px 15px; /* Reduce padding */
     }
 }
 
 /* Desktop Styles */
 @media screen and (min-width: 1025px) {
     .slider-container {
-        height: 600px;
+        height: 550px; /* Reduce height */
     }
 }
