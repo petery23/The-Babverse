@@ -163,6 +163,20 @@ main {
     right: 20px;
 }
 
+/* Back Arrow */
+.back-arrow {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.5em;
+    color: #540D6E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+    color: #EE4266;
+}
+
 /* Month Gallery */
 .month-gallery {
     width: 90%;
@@ -274,6 +288,40 @@ footer p {
     60% { color: #3BCEAC; }
     80% { color: #0EAD69; }
     100% { color: #540D6E; }
+}
+
+/* Movie Checklist */
+.movie-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.movie-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.movie-list li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie-list li.watched {
+    text-decoration: line-through;
+    color: #888;
+    background: #f0f0f0;
+}
+
+.movie-list li:hover {
+    background: #f9f9f9;
 }
 
 /* Media Queries */
