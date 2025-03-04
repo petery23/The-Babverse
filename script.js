@@ -10,7 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSlide() {
         const currentImage = images[currentIndex];
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        monthTitle.textContent = `Month ${currentImage.dataset.month}`;
+        const month = currentImage.dataset.month;
+        monthTitle.textContent = formatMonthTitle(month);
+    }
+
+    function formatMonthTitle(month) {
+        const year = Math.floor((month - 1) / 12);
+        const monthInYear = (month - 1) % 12 + 1;
+        if (year === 0) {
+            return `${monthInYear} Month`;
+        } else {
+            return `${year} Year ${monthInYear} Month`;
+        }
     }
 
     nextBtn.addEventListener('click', () => {

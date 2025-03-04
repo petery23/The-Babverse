@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* Header Styles */
@@ -19,6 +20,7 @@ header {
     animation: slideDown 1s ease-out;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0 0 20px 20px;
 }
 
 header h1 {
@@ -81,6 +83,9 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
     box-sizing: border-box;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(84, 13, 110, 0.15);
 }
 
 /* Slider Styles */
@@ -164,6 +169,10 @@ main {
     max-width: 1000px;
     margin: 30px auto;
     text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(84, 13, 110, 0.15);
+    padding: 20px;
 }
 
 .month-selector {
@@ -235,10 +244,9 @@ footer {
     padding: 15px 0;
     background: linear-gradient(to right, #540D6E, #EE4266);
     color: #FFD23F;
-    position: fixed;
     width: 100%;
-    bottom: 0;
     box-shadow: 0 -4px 15px rgba(84, 13, 110, 0.2);
+    border-radius: 20px 20px 0 0;
 }
 
 footer p {
