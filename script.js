@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.slider img');
     
     let currentIndex = 0;
+    let autoScrollInterval;
 
     function updateSlide() {
         const currentImage = images[currentIndex];
@@ -17,11 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatMonthTitle(month) {
         const year = Math.floor((month - 1) / 12);
         const monthInYear = (month - 1) % 12 + 1;
+        const monthText = monthInYear === 1 ? 'Month' : 'Months';
         if (year === 0) {
-            return `${monthInYear} Month`;
+            return `${monthInYear} ${monthText}`;
         } else {
-            return `${year} Year ${monthInYear} Month`;
+            const yearText = year === 1 ? 'Year' : 'Years';
+            return `${year} ${yearText} ${monthInYear} ${monthText}`;
         }
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlide();
+        }, 3000); // Change slide every 3 seconds
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
     }
 
     nextBtn.addEventListener('click', () => {
@@ -44,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     slider.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
+        stopAutoScroll();
     });
 
     slider.addEventListener('touchend', e => {
@@ -55,23 +74,26 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex--;
             updateSlide();
         }
+        startAutoScroll();
     });
-});
 
-document.getElementById('monthSelect').addEventListener('change', function() {
-    const selectedMonth = this.value;
-    const galleryGrid = document.getElementById('galleryGrid');
-    galleryGrid.innerHTML = ''; // Clear existing images
+    document.getElementById('monthSelect').addEventListener('change', function() {
+        const selectedMonth = this.value;
+        const galleryGrid = document.getElementById('galleryGrid');
+        galleryGrid.innerHTML = ''; // Clear existing images
 
-    if (selectedMonth) {
-        const images = document.querySelectorAll(`.slider img[data-month="${selectedMonth}"]`);
-        images.forEach(img => {
-            const clone = img.cloneNode(true);
-            clone.onclick = () => {
-                // Optional: add click behavior to view full size
-                window.open(clone.src, '_blank');
-            };
-            galleryGrid.appendChild(clone);
-        });
-    }
+        if (selectedMonth) {
+            const images = document.querySelectorAll(`.slider img[data-month="${selectedMonth}"]`);
+            images.forEach(img => {
+                const clone = img.cloneNode(true);
+                clone.onclick = () => {
+                    // Optional: add click behavior to view full size
+                    window.open(clone.src, '_blank');
+                };
+                galleryGrid.appendChild(clone);
+            });
+        }
+    });
+
+    startAutoScroll();
 });
